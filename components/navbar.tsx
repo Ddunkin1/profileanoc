@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, Terminal, X } from 'lucide-react';
+import { Github, Menu, Terminal, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { site } from '@/lib/site';
 
@@ -46,6 +46,15 @@ export function Navbar() {
             </a>
           ))}
           <a
+            href="https://github.com/Ddunkin1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium transition-colors hover:text-primary"
+            aria-label="GitHub"
+          >
+            <Github className="size-5" />
+          </a>
+          <a
             className="gold-glow rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-background-dark transition-all"
             href="#contact"
           >
@@ -83,6 +92,16 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
+              <a
+                href="https://github.com/Ddunkin1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white/5 hover:text-primary"
+                aria-label="GitHub"
+                onClick={() => setOpen(false)}
+              >
+                <Github className="size-5" />
+              </a>
               <a
                 className="gold-glow mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-bold text-background-dark"
                 href="#contact"
