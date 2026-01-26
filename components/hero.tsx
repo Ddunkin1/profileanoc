@@ -62,11 +62,11 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay" />
 
             <Image
-              alt="Abstract glowing technology server room with gold accents"
-              src={site.heroImage}
+              alt={`${site.name} profile picture`}
+              src={site.profileImage}
               fill
               priority
-              className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
+              className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
 

@@ -3,6 +3,7 @@ const heroImage =
 
 export const site = {
   name: 'Nelvi James M. Anoc',
+  profileImage: '/profile.jpg',
   brand: {
     title: 'NELVI',
     accent: 'ANOC',

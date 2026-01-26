@@ -31,8 +31,7 @@ export function Navbar() {
             <Terminal className="size-4" aria-hidden="true" />
           </div>
           <h1 className="text-xl font-bold tracking-tighter">
-            {site.brand.title}
-            <span className="text-primary">.{site.brand.accent}or</span>
+            AppDev <span className="text-primary">Portfolio</span>
           </h1>
         </a>
 
