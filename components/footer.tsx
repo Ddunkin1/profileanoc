@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-gold/20 bg-background-dark px-6 py-12">
+    <footer className="border-t border-border-gold/10 bg-slate-50 px-6 py-12 transition-colors dark:border-border-gold/20 dark:bg-background-dark">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,33 +18,33 @@ export function Footer() {
           <div className="flex size-6 items-center justify-center rounded bg-primary text-background-dark">
             <Terminal className="size-3" aria-hidden="true" />
           </div>
-          <h2 className="text-lg font-bold tracking-tighter">
+          <h2 className="text-lg font-bold tracking-tighter text-slate-900 dark:text-white">
             {site.brand.title}
             <span className="text-primary">.{site.brand.accent}</span>
           </h2>
         </div>
 
-        <p className="text-center text-sm text-slate-500 md:text-left">
+        <p className="text-center text-sm text-slate-800 dark:text-slate-500 md:text-left">
           © 2024 {site.name}. All rights reserved. {site.footer.tagline}
         </p>
 
         <div className="flex gap-6">
           <a
-            className="text-slate-400 transition-colors hover:text-primary"
+            className="text-slate-800 transition-colors hover:text-primary dark:text-slate-400"
             href={site.footer.links.email}
             aria-label="Email"
           >
             <Mail className="size-5" aria-hidden="true" />
           </a>
           <a
-            className="text-slate-400 transition-colors hover:text-primary"
+            className="text-slate-800 transition-colors hover:text-primary dark:text-slate-400"
             href={site.footer.links.website}
             aria-label="Website"
           >
             <Globe className="size-5" aria-hidden="true" />
           </a>
           <a
-            className="text-slate-400 transition-colors hover:text-primary"
+            className="text-slate-800 transition-colors hover:text-primary dark:text-slate-400"
             href={site.footer.links.social}
             aria-label="Social"
           >

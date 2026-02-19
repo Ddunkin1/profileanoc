@@ -17,11 +17,11 @@ export function Expertise() {
           transition={{ duration: 0.55 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold">
+          <h2 className="mb-4 text-4xl font-bold text-slate-900 dark:text-white">
             {site.expertise.title.split(' ')[0]}{' '}
             <span className="gold-gradient-text">{site.expertise.title.split(' ').slice(1).join(' ')}</span>
           </h2>
-          <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-xl text-slate-800 dark:text-slate-400">
             {site.expertise.subtitle}
           </p>
         </motion.div>
@@ -36,13 +36,13 @@ export function Expertise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.55, delay: idx * 0.05 }}
-                className="group rounded-xl border border-border-gold/30 bg-surface-dark p-8 transition-all duration-300 hover:border-primary/50"
+                className="group rounded-xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md dark:border-border-gold/30 dark:bg-surface-dark dark:hover:border-primary/50"
               >
                 <div className="mb-6 flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform group-hover:scale-110">
                   <Icon className="size-5" aria-hidden="true" />
                 </div>
-                <h3 className="mb-3 text-xl font-bold">{c.title}</h3>
-                <p className="text-sm leading-relaxed text-slate-400">{c.description}</p>
+                <h3 className="mb-3 text-xl font-bold text-slate-900 dark:text-white">{c.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-800 dark:text-slate-400">{c.description}</p>
               </motion.div>
             );
           })}

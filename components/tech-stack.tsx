@@ -14,14 +14,14 @@ function getIcon(label: string) {
 
 export function TechStack() {
   return (
-    <section className="bg-surface-dark px-6 py-16">
+    <section className="bg-slate-50 px-6 py-16 transition-colors dark:bg-surface-dark">
       <div className="mx-auto max-w-7xl">
         <motion.h3
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-center text-sm font-bold uppercase tracking-widest text-slate-500"
+          className="mb-10 text-center text-sm font-bold uppercase tracking-widest text-slate-800 dark:text-slate-500"
         >
           {site.stack.title}
         </motion.h3>
@@ -36,10 +36,10 @@ export function TechStack() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45, delay: idx * 0.03 }}
-                className="flex items-center gap-3 rounded-lg border border-border-gold/20 bg-background-dark p-4 transition-all hover:border-primary/30"
+                className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-4 transition-all hover:border-primary/30 dark:border-border-gold/20 dark:bg-background-dark"
               >
                 <Icon className="size-5 text-primary" aria-hidden="true" />
-                <span className="text-sm font-bold">{label}</span>
+                <span className="text-sm font-bold text-slate-900 dark:text-white">{label}</span>
               </motion.div>
             );
           })}

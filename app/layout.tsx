@@ -3,6 +3,7 @@ import { Space_Grotesk } from 'next/font/google';
 import type { ReactNode } from 'react';
 import './globals.css';
 import { site } from '@/lib/site';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -21,11 +22,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${spaceGrotesk.variable} font-display bg-background-light text-slate-900 transition-colors duration-300 dark:bg-background-dark dark:text-white`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
