@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, BadgeCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { site } from '@/lib/site';
 
@@ -69,18 +69,6 @@ export function Hero() {
               className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-
-            <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/10 bg-background-dark/80 p-6 backdrop-blur-md">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="mb-1 text-xs font-bold uppercase tracking-widest text-primary">
-                    {site.hero.featured.label}
-                  </p>
-                  <h3 className="text-lg font-bold">{site.hero.featured.title}</h3>
-                </div>
-                <BadgeCheck className="size-5 text-primary" aria-hidden="true" />
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>

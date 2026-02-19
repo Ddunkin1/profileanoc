@@ -17,7 +17,7 @@ export function Projects() {
           className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end"
         >
           <div>
-            <h2 className="mb-4 text-4xl font-bold">
+            <h2 className="mb-4 text-4xl font-bold text-slate-900 dark:text-white">
               {site.projects.title.split(' ')[0]}{' '}
               <span className="text-primary">{site.projects.title.split(' ').slice(1).join(' ')}</span>
             </h2>
@@ -64,7 +64,7 @@ export function Projects() {
                 </div>
               </div>
 
-              <h3 className="mb-2 text-2xl font-bold">{p.title}</h3>
+              <h3 className="mb-2 text-2xl font-bold text-slate-900 dark:text-white">{p.title}</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">{p.meta}</p>
             </motion.a>
           ))}
