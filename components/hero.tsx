@@ -70,15 +70,15 @@ export function Hero() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
 
-            <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/10 bg-background-dark/80 p-6 backdrop-blur-md">
+            <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/10 bg-slate-900/85 p-6 backdrop-blur-md dark:bg-background-dark/80">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="mb-1 text-xs font-bold uppercase tracking-widest text-primary">
                     {site.hero.featured.label}
                   </p>
-                  <h3 className="text-lg font-bold">{site.hero.featured.title}</h3>
+                  <h3 className="text-lg font-bold text-white">{site.hero.featured.title}</h3>
                 </div>
-                <BadgeCheck className="size-5 text-primary" aria-hidden="true" />
+                <BadgeCheck className="size-5 shrink-0 text-primary" aria-hidden="true" />
               </div>
             </div>
           </div>
