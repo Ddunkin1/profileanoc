@@ -1,6 +1,6 @@
 export const site = {
   name: 'Nelvi James M. Anoc',
-  profileImage: '/james.jpg',
+  profileImage: '/profile.jpg',
   brand: {
     title: 'NELVI',
     accent: 'ANOC',
@@ -71,7 +71,7 @@ export const site = {
       {
         title: 'Personal Portfolio',
         meta: 'Web • Next.js & React',
-        image: '/james.jpg',
+        image: '/profile.jpg',
         alt: 'Portfolio hero and project showcase',
         href: '#',
       },
