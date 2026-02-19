@@ -14,6 +14,7 @@ const placeholderClass = 'placeholder-slate-500 dark:placeholder-slate-400';
 
 export function Contact() {
   const [formState, setFormState] = useState<FormState>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,12 +22,16 @@ export function Contact() {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setErrorMessage('');
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -34,6 +39,13 @@ export function Contact() {
       !formData.message.trim()
     ) {
       setFormState('error');
+      setErrorMessage('Please fill in all fields.');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setFormState('error');
+      setErrorMessage('Please enter a valid email address.');
       return;
     }
     setFormState('loading');
@@ -48,6 +60,10 @@ export function Contact() {
       setFormData({ name: '', email: '', subject: '', message: '' });
     } else {
       setFormState('error');
+      setErrorMessage(
+        'Failed to send message. Please try again later or contact me directly at ' +
+          site.contact.email
+      );
     }
   };
 
@@ -93,7 +109,7 @@ export function Contact() {
                 <span>{site.contact.location}</span>
               </div>
             </div>
-            {/* Decorative circles like reference .left::before / .left::after */}
+            {/* Decorative circles */}
             <span
               className="pointer-events-none absolute -bottom-12 -right-12 h-[200px] w-[200px] rounded-full border border-primary/10 dark:border-primary/20"
               aria-hidden
@@ -104,7 +120,7 @@ export function Contact() {
             />
           </div>
 
-          {/* Right panel - form only, no card wrapper */}
+          {/* Right panel - form */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,9 +229,9 @@ export function Contact() {
                   </button>
                 </div>
 
-                {formState === 'error' && (
+                {formState === 'error' && errorMessage && (
                   <p className="text-sm font-medium text-red-500 dark:text-red-400">
-                    Failed to send. Please fill all fields and try again.
+                    {errorMessage}
                   </p>
                 )}
               </form>

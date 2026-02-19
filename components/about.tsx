@@ -10,7 +10,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="border-y border-border-gold/20 bg-slate-50 px-6 py-24 transition-colors dark:bg-surface-dark/30"
+      className="border-y border-border-gold/10 bg-slate-50 px-6 py-24 transition-colors dark:border-border-gold/20 dark:bg-surface-dark/30"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 md:grid-cols-2">
         <motion.div

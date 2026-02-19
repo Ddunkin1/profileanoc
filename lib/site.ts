@@ -1,6 +1,6 @@
 export const site = {
   name: 'Nelvi James M. Anoc',
-  profileImage: '/profile.jpg',
+  profileImage: '/james.jpg',
   brand: {
     title: 'NELVI',
     accent: 'ANOC',
@@ -15,8 +15,8 @@ export const site = {
     primaryCta: { label: 'View Projects', href: '#projects' },
     secondaryCta: { label: 'My Expertise', href: '#expertise' },
     featured: {
-      label: 'Featured Project',
-      title: 'Portfolio System v1.0',
+      label: 'Current Project',
+      title: 'Personal Portfolio',
     },
   },
   about: {

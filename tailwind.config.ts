@@ -7,8 +7,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#f2b90d',
-        'background-light': '#f8f8f5',
+        'background-light': '#ffffff',
         'background-dark': '#0a0a0a',
+        'surface-light': '#f8f9fa',
         'surface-dark': '#161616',
         'border-gold': '#493f22',
       },

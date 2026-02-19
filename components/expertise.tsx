@@ -21,7 +21,7 @@ export function Expertise() {
             {site.expertise.title.split(' ')[0]}{' '}
             <span className="gold-gradient-text">{site.expertise.title.split(' ').slice(1).join(' ')}</span>
           </h2>
-          <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-xl text-slate-800 dark:text-slate-400">
             {site.expertise.subtitle}
           </p>
         </motion.div>

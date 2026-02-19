@@ -21,7 +21,7 @@ export function Projects() {
               {site.projects.title.split(' ')[0]}{' '}
               <span className="text-primary">{site.projects.title.split(' ').slice(1).join(' ')}</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-400">
+            <p className="text-slate-800 dark:text-slate-400">
               {site.projects.subtitle}
             </p>
           </div>
@@ -57,7 +57,7 @@ export function Projects() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center bg-background-dark/60 opacity-0 transition-opacity group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/60 dark:bg-background-dark/60 opacity-0 transition-opacity group-hover:opacity-100">
                   <span className="translate-y-4 rounded-lg bg-primary px-6 py-3 font-bold text-background-dark transition-transform group-hover:translate-y-0">
                     View Case Study
                   </span>

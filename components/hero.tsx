@@ -25,13 +25,13 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">
+          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 md:text-7xl dark:text-white">
             {site.hero.headlinePrefix}{' '}
             <span className="gold-gradient-text">{site.hero.headlineEmphasis}</span>
             {site.hero.headlineSuffix ? ` ${site.hero.headlineSuffix}` : null}
           </h1>
 
-          <p className="max-w-lg text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="max-w-lg text-lg leading-relaxed text-slate-800 dark:text-slate-400">
             {site.hero.bio}
           </p>
 
@@ -58,7 +58,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
         >
-          <div className="group relative aspect-square w-full overflow-hidden rounded-2xl border border-border-gold/50 bg-surface-dark">
+          <div className="group relative aspect-square w-full overflow-hidden rounded-2xl border border-border-gold/30 bg-surface-light dark:border-border-gold/50 dark:bg-surface-dark">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay" />
 
             <Image
