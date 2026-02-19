@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Terminal } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 import { site } from '@/lib/site';
 
 export function Footer() {
@@ -12,24 +12,10 @@ export function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.5 }}
-        className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row"
+        className="relative mx-auto flex max-w-7xl flex-row items-center justify-center py-2"
       >
-        <div className="flex items-center gap-3">
-          <div className="flex size-6 items-center justify-center rounded bg-primary text-background-dark">
-            <Terminal className="size-3" aria-hidden="true" />
-          </div>
-          <h2 className="text-lg font-bold tracking-tighter text-slate-900 dark:text-white">
-            {site.brand.title}
-            <span className="text-primary">.{site.brand.accent}</span>
-          </h2>
-        </div>
-
-        <p className="text-center text-sm text-slate-600 md:text-left dark:text-slate-500">
-          © 2024 {site.name}. All rights reserved. {site.footer.tagline}
-        </p>
-
         <a
-          className="text-slate-600 transition-colors hover:text-primary dark:text-slate-400"
+          className="absolute right-0 text-slate-700 transition-colors hover:text-primary dark:text-slate-300 dark:hover:text-primary"
           href={site.footer.links.social}
           target="_blank"
           rel="noopener noreferrer"
@@ -37,6 +23,9 @@ export function Footer() {
         >
           <Facebook className="size-5" aria-hidden="true" />
         </a>
+        <p className="text-center text-base leading-relaxed text-slate-700 dark:text-slate-300">
+          © 2026 {site.name}. All rights reserved. {site.footer.tagline}
+        </p>
       </motion.div>
     </footer>
   );
