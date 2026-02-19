@@ -73,7 +73,7 @@ export const site = {
         meta: 'Web • Next.js & React',
         image: '/profile.jpg',
         alt: 'Portfolio hero and project showcase',
-        href: '#',
+        href: 'https://nelvijamesanoc.com',
       },
     ],
   },
